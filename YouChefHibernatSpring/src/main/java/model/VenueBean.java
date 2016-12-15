@@ -13,14 +13,14 @@ public class VenueBean implements java.io.Serializable{
 	@Id
 	@SequenceGenerator(name="v_id", allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int v_id;
+	private Integer v_id;
 	private String v_name;
 	private String v_address;
 	private String v_status;
-	public int getV_id() {
+	public Integer getV_id() {
 		return v_id;
 	}
-	public void setV_id(int v_id) {
+	public void setV_id(Integer v_id) {
 		this.v_id = v_id;
 	}
 	public String getV_name() {

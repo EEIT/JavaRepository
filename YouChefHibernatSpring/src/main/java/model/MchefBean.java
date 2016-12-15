@@ -14,13 +14,13 @@ public class MchefBean implements java.io.Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	private int mc_id;
-	private int years;
+	private Integer mc_id;
+	private Integer years;
 	private String venue;
-	private int quota;
+	private Integer quota;
 	private String background;
 	private VenueBean v_id;
-	private int hasPlace;
+	private Integer hasPlace;
 
 	@Override
 	public String toString() {
@@ -29,19 +29,19 @@ public class MchefBean implements java.io.Serializable {
 				+ ", v_id = " + v_id + ", hasPlace = " + hasPlace + "]";
 	}
 
-	public int getMc_id() {
+	public Integer getMc_id() {
 		return mc_id;
 	}
 
-	public void setMc_id(int mc_id) {
+	public void setMc_id(Integer mc_id) {
 		this.mc_id = mc_id;
 	}
 
-	public int getYears() {
+	public Integer getYears() {
 		return years;
 	}
 
-	public void setYears(int years) {
+	public void setYears(Integer years) {
 		this.years = years;
 	}
 
@@ -53,11 +53,11 @@ public class MchefBean implements java.io.Serializable {
 		this.venue = venue;
 	}
 
-	public int getQuota() {
+	public Integer getQuota() {
 		return quota;
 	}
 
-	public void setQuota(int quota) {
+	public void setQuota(Integer quota) {
 		this.quota = quota;
 	}
 
@@ -79,11 +79,11 @@ public class MchefBean implements java.io.Serializable {
 		this.v_id = v_id;
 	}
 
-	public int getHasPlace() {
+	public Integer getHasPlace() {
 		return hasPlace;
 	}
 
-	public void setHasPlace(int hasPlace) {
+	public void setHasPlace(Integer hasPlace) {
 		this.hasPlace = hasPlace;
 	}
 }

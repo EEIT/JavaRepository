@@ -17,7 +17,7 @@ public class MchefDAOHibernate implements MchefDAO {
 	}
 
 	@Override
-	public MchefBean select(int mc_id) {
+	public MchefBean select(Integer mc_id) {
 		return this.getSession().get(MchefBean.class, mc_id);
 	}
 

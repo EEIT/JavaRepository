@@ -12,43 +12,43 @@ public class CalendarBean implements java.io.Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	private int cal_id;
-	private int c_id;
-	private int mc_id;
-	private int date1;
-	private int date2;
-	private int date3;
-	private int date4;
-	private int date5;
-	private int date6;
-	private int date7;
-	private int date8;
-	private int date9;
-	private int date10;
-	private int date11;
-	private int date12;
-	private int date13;
-	private int date14;
-	private int date15;
-	private int date16;
-	private int date17;
-	private int date18;
-	private int date19;
-	private int date20;
-	private int date21;
-	private int date22;
-	private int date23;
-	private int date24;
-	private int date25;
-	private int date26;
-	private int date27;
-	private int date28;
-	private int date29;
-	private int date30;
-	private int date31;
+	private Integer cal_id;
+	private Integer c_id;
+	private Integer mc_id;
+	private Integer date1;
+	private Integer date2;
+	private Integer date3;
+	private Integer date4;
+	private Integer date5;
+	private Integer date6;
+	private Integer date7;
+	private Integer date8;
+	private Integer date9;
+	private Integer date10;
+	private Integer date11;
+	private Integer date12;
+	private Integer date13;
+	private Integer date14;
+	private Integer date15;
+	private Integer date16;
+	private Integer date17;
+	private Integer date18;
+	private Integer date19;
+	private Integer date20;
+	private Integer date21;
+	private Integer date22;
+	private Integer date23;
+	private Integer date24;
+	private Integer date25;
+	private Integer date26;
+	private Integer date27;
+	private Integer date28;
+	private Integer date29;
+	private Integer date30;
+	private Integer date31;
 	private String theYear;
 	private String theMonth;
-	private int maxNum;
+	private Integer maxNum;
 	
 	@Override
 	public String toString() {
@@ -89,208 +89,208 @@ public class CalendarBean implements java.io.Serializable {
 				+ ", maxNum = " + maxNum
 				+"]";
 	}
-	public int getCal_id() {
+	public Integer getCal_id() {
 		return cal_id;
 	}
-	public void setCal_id(int cal_id) {
+	public void setCal_id(Integer cal_id) {
 		this.cal_id = cal_id;
 	}
-	public int getC_id() {
+	public Integer getC_id() {
 		return c_id;
 	}
-	public void setC_id(int c_id) {
+	public void setC_id(Integer c_id) {
 		this.c_id = c_id;
 	}
-	public int getMc_id() {
+	public Integer getMc_id() {
 		return mc_id;
 	}
-	public void setMc_id(int mc_id) {
+	public void setMc_id(Integer mc_id) {
 		this.mc_id = mc_id;
 	}
-	public int getDate1() {
+	public Integer getDate1() {
 		return date1;
 	}
-	public void setDate1(int date1) {
+	public void setDate1(Integer date1) {
 		this.date1 = date1;
 	}
-	public int getDate2() {
+	public Integer getDate2() {
 		return date2;
 	}
-	public void setDate2(int date2) {
+	public void setDate2(Integer date2) {
 		this.date2 = date2;
 	}
-	public int getDate3() {
+	public Integer getDate3() {
 		return date3;
 	}
-	public void setDate3(int date3) {
+	public void setDate3(Integer date3) {
 		this.date3 = date3;
 	}
-	public int getDate4() {
+	public Integer getDate4() {
 		return date4;
 	}
-	public void setDate4(int date4) {
+	public void setDate4(Integer date4) {
 		this.date4 = date4;
 	}
-	public int getDate5() {
+	public Integer getDate5() {
 		return date5;
 	}
-	public void setDate5(int date5) {
+	public void setDate5(Integer date5) {
 		this.date5 = date5;
 	}
-	public int getDate6() {
+	public Integer getDate6() {
 		return date6;
 	}
-	public void setDate6(int date6) {
+	public void setDate6(Integer date6) {
 		this.date6 = date6;
 	}
-	public int getDate7() {
+	public Integer getDate7() {
 		return date7;
 	}
-	public void setDate7(int date7) {
+	public void setDate7(Integer date7) {
 		this.date7 = date7;
 	}
-	public int getDate8() {
+	public Integer getDate8() {
 		return date8;
 	}
-	public void setDate8(int date8) {
+	public void setDate8(Integer date8) {
 		this.date8 = date8;
 	}
-	public int getDate9() {
+	public Integer getDate9() {
 		return date9;
 	}
-	public void setDate9(int date9) {
+	public void setDate9(Integer date9) {
 		this.date9 = date9;
 	}
-	public int getDate10() {
+	public Integer getDate10() {
 		return date10;
 	}
-	public void setDate10(int date10) {
+	public void setDate10(Integer date10) {
 		this.date10 = date10;
 	}
-	public int getDate11() {
+	public Integer getDate11() {
 		return date11;
 	}
-	public void setDate11(int date11) {
+	public void setDate11(Integer date11) {
 		this.date11 = date11;
 	}
-	public int getDate12() {
+	public Integer getDate12() {
 		return date12;
 	}
-	public void setDate12(int date12) {
+	public void setDate12(Integer date12) {
 		this.date12 = date12;
 	}
-	public int getDate13() {
+	public Integer getDate13() {
 		return date13;
 	}
-	public void setDate13(int date13) {
+	public void setDate13(Integer date13) {
 		this.date13 = date13;
 	}
-	public int getDate14() {
+	public Integer getDate14() {
 		return date14;
 	}
-	public void setDate14(int date14) {
+	public void setDate14(Integer date14) {
 		this.date14 = date14;
 	}
-	public int getDate15() {
+	public Integer getDate15() {
 		return date15;
 	}
-	public void setDate15(int date15) {
+	public void setDate15(Integer date15) {
 		this.date15 = date15;
 	}
-	public int getDate16() {
+	public Integer getDate16() {
 		return date16;
 	}
-	public void setDate16(int date16) {
+	public void setDate16(Integer date16) {
 		this.date16 = date16;
 	}
-	public int getDate17() {
+	public Integer getDate17() {
 		return date17;
 	}
-	public void setDate17(int date17) {
+	public void setDate17(Integer date17) {
 		this.date17 = date17;
 	}
-	public int getDate18() {
+	public Integer getDate18() {
 		return date18;
 	}
-	public void setDate18(int date18) {
+	public void setDate18(Integer date18) {
 		this.date18 = date18;
 	}
-	public int getDate19() {
+	public Integer getDate19() {
 		return date19;
 	}
-	public void setDate19(int date19) {
+	public void setDate19(Integer date19) {
 		this.date19 = date19;
 	}
-	public int getDate20() {
+	public Integer getDate20() {
 		return date20;
 	}
-	public void setDate20(int date20) {
+	public void setDate20(Integer date20) {
 		this.date20 = date20;
 	}
-	public int getDate21() {
+	public Integer getDate21() {
 		return date21;
 	}
-	public void setDate21(int date21) {
+	public void setDate21(Integer date21) {
 		this.date21 = date21;
 	}
-	public int getDate22() {
+	public Integer getDate22() {
 		return date22;
 	}
-	public void setDate22(int date22) {
+	public void setDate22(Integer date22) {
 		this.date22 = date22;
 	}
-	public int getDate23() {
+	public Integer getDate23() {
 		return date23;
 	}
-	public void setDate23(int date23) {
+	public void setDate23(Integer date23) {
 		this.date23 = date23;
 	}
-	public int getDate24() {
+	public Integer getDate24() {
 		return date24;
 	}
-	public void setDate24(int date24) {
+	public void setDate24(Integer date24) {
 		this.date24 = date24;
 	}
-	public int getDate25() {
+	public Integer getDate25() {
 		return date25;
 	}
-	public void setDate25(int date25) {
+	public void setDate25(Integer date25) {
 		this.date25 = date25;
 	}
-	public int getDate26() {
+	public Integer getDate26() {
 		return date26;
 	}
-	public void setDate26(int date26) {
+	public void setDate26(Integer date26) {
 		this.date26 = date26;
 	}
-	public int getDate27() {
+	public Integer getDate27() {
 		return date27;
 	}
-	public void setDate27(int date27) {
+	public void setDate27(Integer date27) {
 		this.date27 = date27;
 	}
-	public int getDate28() {
+	public Integer getDate28() {
 		return date28;
 	}
-	public void setDate28(int date28) {
+	public void setDate28(Integer date28) {
 		this.date28 = date28;
 	}
-	public int getDate29() {
+	public Integer getDate29() {
 		return date29;
 	}
-	public void setDate29(int date29) {
+	public void setDate29(Integer date29) {
 		this.date29 = date29;
 	}
-	public int getDate30() {
+	public Integer getDate30() {
 		return date30;
 	}
-	public void setDate30(int date30) {
+	public void setDate30(Integer date30) {
 		this.date30 = date30;
 	}
-	public int getDate31() {
+	public Integer getDate31() {
 		return date31;
 	}
-	public void setDate31(int date31) {
+	public void setDate31(Integer date31) {
 		this.date31 = date31;
 	}
 	public String getTheYear() {
@@ -305,10 +305,10 @@ public class CalendarBean implements java.io.Serializable {
 	public void setTheMonth(String theMonth) {
 		this.theMonth = theMonth;
 	}
-	public int getMaxNum() {
+	public Integer getMaxNum() {
 		return maxNum;
 	}
-	public void setMaxNum(int maxNum) {
+	public void setMaxNum(Integer maxNum) {
 		this.maxNum = maxNum;
 	}
 	
