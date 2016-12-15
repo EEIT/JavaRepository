@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,12 +16,13 @@ public class MchefBean implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	private Integer mc_id;
+	private MemberBean memberBean;
 	private Integer years;
 	private String venue;
 	private Integer quota;
 	private String background;
 	private VenueBean v_id;
-	private Integer hasPlace;
+	private String hasPlace;
 
 	@Override
 	public String toString() {
@@ -29,12 +31,27 @@ public class MchefBean implements java.io.Serializable {
 				+ ", v_id = " + v_id + ", hasPlace = " + hasPlace + "]";
 	}
 
-	public Integer getMc_id() {
+	@Id  
+//    @GeneratedValue(generator="myGenerator")  
+//    @GenericGenerator(name="myGenerator", strategy="foreign", 
+//    	parameters=@Parameter(value="member", name = "property"))
+	public Integer getMc_id(){
 		return mc_id;
 	}
-
+	
 	public void setMc_id(Integer mc_id) {
 		this.mc_id = mc_id;
+	}
+	
+//	@OneToOne(cascade=CascadeType.ALL)
+	@OneToOne
+	@JoinColumn(name = "mc_id")
+	public MemberBean getMemberBean() {
+		return memberBean;
+	}
+
+	public void setMemberBean(MemberBean memberBean) {
+		this.memberBean = memberBean;
 	}
 
 	public Integer getYears() {
@@ -79,11 +96,11 @@ public class MchefBean implements java.io.Serializable {
 		this.v_id = v_id;
 	}
 
-	public Integer getHasPlace() {
+	public String getHasPlace() {
 		return hasPlace;
 	}
 
-	public void setHasPlace(Integer hasPlace) {
+	public void setHasPlace(String hasPlace) {
 		this.hasPlace = hasPlace;
 	}
 }

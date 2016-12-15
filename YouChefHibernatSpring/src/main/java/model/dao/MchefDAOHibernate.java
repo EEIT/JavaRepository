@@ -17,14 +17,13 @@ public class MchefDAOHibernate implements MchefDAO {
 	}
 
 	@Override
-	public MchefBean select(Integer mc_id) {
-		return this.getSession().get(MchefBean.class, mc_id);
+	public MchefBean select(MchefBean mc_id) {
+		return this.getSession().get(MchefBean.class, mc_id.getMc_id());
 	}
 
 	@Override
-	public boolean insert(MchefBean bean) {
-		// TODO Auto-generated method stub
-		return false;
+	public int insert(MchefBean bean) {
+		return (int) this.getSession().save(bean);
 	}
 
 	public static void main(String[] args) {

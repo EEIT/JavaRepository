@@ -1,7 +1,7 @@
 package model;
 
 public interface MchefDAO {
-	MchefBean select (Integer mc_id);
+	MchefBean select (MchefBean mc_id);
 
-	boolean insert(MchefBean bean);
+	int insert(MchefBean bean);
 }

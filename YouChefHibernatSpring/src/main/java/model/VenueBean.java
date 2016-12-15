@@ -10,6 +10,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "venue")
 public class VenueBean implements java.io.Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@SequenceGenerator(name="v_id", allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -17,6 +21,7 @@ public class VenueBean implements java.io.Serializable{
 	private String v_name;
 	private String v_address;
 	private String v_status;
+	
 	public Integer getV_id() {
 		return v_id;
 	}
