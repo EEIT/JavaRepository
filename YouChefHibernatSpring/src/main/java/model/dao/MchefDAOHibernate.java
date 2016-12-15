@@ -1,5 +1,9 @@
 package model.dao;
 
+import java.util.List;
+
+import javax.persistence.Query;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +33,12 @@ public class MchefDAOHibernate implements MchefDAO {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public List<MchefBean> selectAll() {
+		Query query = this.getSession().createQuery("from MchefBean");
+		return (List<MchefBean>) query.getResultList();
 	}
 
 }
