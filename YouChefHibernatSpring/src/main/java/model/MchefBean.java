@@ -2,18 +2,24 @@ package model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "mChef")
-public class MchefBean {
+public class MchefBean implements java.io.Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	private int mc_id;
 	private int years;
 	private String venue;
 	private int quota;
 	private String background;
-	private int v_id;
+	private VenueBean v_id;
 	private int hasPlace;
 
 	@Override
@@ -63,11 +69,13 @@ public class MchefBean {
 		this.background = background;
 	}
 
-	public int getV_id() {
+	@ManyToOne 
+	@JoinColumn(name = "v_id")
+	public VenueBean getV_id() {
 		return v_id;
 	}
 
-	public void setV_id(int v_id) {
+	public void setV_id(VenueBean v_id) {
 		this.v_id = v_id;
 	}
 

@@ -6,7 +6,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "calendar")
-public class CalendarBean {
+public class CalendarBean implements java.io.Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	private int cal_id;
 	private int c_id;

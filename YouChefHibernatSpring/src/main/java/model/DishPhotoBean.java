@@ -6,7 +6,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "dishPhoto")
-public class DishPhotoBean {
+public class DishPhotoBean implements java.io.Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	private int dp_id;
 	private int md_id;

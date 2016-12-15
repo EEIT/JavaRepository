@@ -8,7 +8,8 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.current_session_context_class">thread</property>
         
-		<mapping class="" />
-		<mapping class="" />
+		<mapping class="model.MchefBean" />
+		<mapping class="model.VenueBean" />
+<!-- 		<mapping class="model.DishPhotoBean" /> -->
     </session-factory>
 </hibernate-configuration>
