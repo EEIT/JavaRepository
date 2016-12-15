@@ -12,17 +12,18 @@ import org.springframework.stereotype.Repository;
 import model.MchefBean;
 import model.MchefDAO;
 
-@Repository(value="mchefDao")
+@Repository(value = "mchefDao")
 public class MchefDAOHibernate implements MchefDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
+
 	public Session getSession() {
 		return sessionFactory.getCurrentSession();
 	}
 
 	@Override
-	public MchefBean select(MchefBean mc_id) {
-		return this.getSession().get(MchefBean.class, mc_id.getMc_id());
+	public MchefBean select(MchefBean bean) {
+		return this.getSession().get(MchefBean.class, bean.getMc_id());
 	}
 
 	@Override
@@ -35,10 +36,22 @@ public class MchefDAOHibernate implements MchefDAO {
 
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<MchefBean> selectAll() {
 		Query query = this.getSession().createQuery("from MchefBean");
 		return (List<MchefBean>) query.getResultList();
+	}
+
+	@Override
+	public MchefBean update(MchefBean bean) {
+		if (null != select(bean)) {
+			getSession().clear();
+			this.getSession().update(bean);
+			return select(bean);
+		}else{
+			return null;
+		}
 	}
 
 }

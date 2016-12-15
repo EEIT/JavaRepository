@@ -9,35 +9,48 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 
-@Service(value="mchefService")
+@Service(value = "mchefService")
 public class MchefService {
-
 	public static void main(String[] args) {
-		ApplicationContext context =
-				new ClassPathXmlApplicationContext("beans.config.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.config.xml");
 		SessionFactory sessionFactory = (SessionFactory) context.getBean("sessionFactory");
 		try {
 			sessionFactory.getCurrentSession().beginTransaction();
 
 			MchefService service = (MchefService) context.getBean("mchefService");
-			
-			//test for apply
+
+			// test for apply
+			// MchefBean bean = new MchefBean();
+			// bean.setMc_id(1004);
+			// bean.setYears(8);
+			// bean.setVenue("新北市五股區");
+			// bean.setQuota(10);
+			// bean.setBackground("13年掌廚資歷，擅長台式宴客料理。");
+			//// VenueBean vb = new VenueBean();
+			//// vb.setV_id(0);
+			//// bean.setV_id(vb);
+			// bean.setHasPlace("0");
+			//// MemberBean mb = new MemberBean();
+			//// mb.setM_id(1001);
+			// System.out.println("beans=" + service.apply(bean));
+
+			// test for selectAll
+			// System.out.println(service.selectAll());
+
+			// test for update
 //			MchefBean bean = new MchefBean();
-//			bean.setMc_id(1004);
-//			bean.setYears(8);
+//			bean.setMc_id(1005);
+//			bean.setYears(20);
 //			bean.setVenue("新北市五股區");
-//			bean.setQuota(10);
+//			bean.setQuota(20);
 //			bean.setBackground("13年掌廚資歷，擅長台式宴客料理。");
-////			VenueBean vb = new VenueBean();
-////			vb.setV_id(0);
-////			bean.setV_id(vb);
 //			bean.setHasPlace("0");
-////			MemberBean mb = new MemberBean();
-////			mb.setM_id(1001);
-//			System.out.println("beans=" + service.apply(bean));
+//			System.out.println(service.update(bean));
 			
-			//test for selectAll
-			System.out.println(service.selectAll());
+			//test for select(MchefBean)
+			MchefBean bean = new MchefBean();
+			bean.setMc_id(1004);
+			System.out.println(service.select(bean));
 
 			sessionFactory.getCurrentSession().getTransaction().commit();
 		} finally {
@@ -45,25 +58,33 @@ public class MchefService {
 			((ConfigurableApplicationContext) context).close();
 		}
 	}
-	
+
 	@Autowired
 	private MchefDAO mchefDao;
 
 	public boolean apply(MchefBean bean) {
 		boolean b = false;
-//		System.out.println(mchefDao.select(bean).getMemberBean().getAddress());
-//		System.out.println("insert:" + mchefDao.insert(bean));
-		if(null == mchefDao.select(bean)){
-			if(mchefDao.insert(bean) > 0)
+		// System.out.println(mchefDao.select(bean).getMemberBean().getAddress());
+		// System.out.println("insert:" + mchefDao.insert(bean));
+		if (null == mchefDao.select(bean)) {
+			if (mchefDao.insert(bean) > 0)
 				b = true;
 		}
 		System.out.println("apply result is " + b);
 		return b;
 	}
-	
-	public List<MchefBean> selectAll(){
+
+	public List<MchefBean> selectAll() {
 		List<MchefBean> list = mchefDao.selectAll();
 		return list;
+	}
+
+	public MchefBean select(MchefBean bean) {
+		return mchefDao.select(bean);
+	}
+
+	public MchefBean update(MchefBean bean) {
+		return mchefDao.update(bean);
 	}
 
 }
