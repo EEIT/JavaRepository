@@ -39,18 +39,24 @@ public class MchefService {
 
 			// test for update
 //			MchefBean bean = new MchefBean();
-//			bean.setMc_id(1005);
+//			bean.setMc_id(1004);
 //			bean.setYears(20);
 //			bean.setVenue("新北市五股區");
 //			bean.setQuota(20);
 //			bean.setBackground("13年掌廚資歷，擅長台式宴客料理。");
+//			VenueBean vb = new VenueBean();
+//			vb.setV_id(15000);
+//			bean.setV_id(vb);
 //			bean.setHasPlace("0");
 //			System.out.println(service.update(bean));
 			
 			//test for select(MchefBean)
 			MchefBean bean = new MchefBean();
 			bean.setMc_id(1004);
-			System.out.println(service.select(bean));
+			MchefBean mb = service.select(bean);
+			System.out.println("MchefBean = " + mb);
+			System.out.println("MemberBean = " + mb.getMemberBean());
+			System.out.println("VenueBean = " + mb.getV_id());
 
 			sessionFactory.getCurrentSession().getTransaction().commit();
 		} finally {
