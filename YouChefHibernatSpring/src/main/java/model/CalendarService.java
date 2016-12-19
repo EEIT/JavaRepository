@@ -29,16 +29,20 @@ public class CalendarService {
 //			System.out.println(service.mchefInput(cb));
 			
 			//Test for ChefInput
-			CalendarBean cb = new CalendarBean();
-//			ChefBean chb = new ChefBean();
-//			chb.setC_id(3002);
-			cb.setChefBean(service.chefDao.select(3002));
-			cb.setDate1(2);
-			cb.setDate2(2);
-			cb.setDate3(3);
-			cb.setTheMonth("201702");
-			cb.setMaxNum(5);
-			System.out.println(service.chefInput(cb));
+//			CalendarBean cb = new CalendarBean();
+//			cb.setChefBean(service.chefDao.select(3002));
+//			cb.setDate1(2);
+//			cb.setDate2(2);
+//			cb.setDate3(3);
+//			cb.setTheMonth("201702");
+//			cb.setMaxNum(5);
+//			System.out.println(service.chefInput(cb));
+			
+			//Test for selecMchef
+//			System.out.println(service.selectMchef(1005, "201701"));
+			
+			//Test for selectChef
+//			System.out.println(service.selectChef(3002, "201702"));
 			
 			sessionFactory.getCurrentSession().getTransaction().commit();
 		} finally {
@@ -53,6 +57,14 @@ public class CalendarService {
 	MchefDAO mchefDao;
 	@Autowired
 	ChefDAO chefDao;
+	
+	public CalendarBean selectMchef(Integer mc_id, String date){
+		return calendarDao.selectMchef(mc_id, date);
+	}
+	
+	public CalendarBean selectChef(Integer c_id, String date){
+		return calendarDao.selectChef(c_id, date);
+	}
 	
 	public CalendarBean mchefInput(CalendarBean calendarBean){
 		Integer mc_id = calendarBean.getMchefBean().getMc_id();
