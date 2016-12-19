@@ -14,7 +14,6 @@ public class MchefBean implements java.io.Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	@Id
 	private Integer mc_id;
 	private MemberBean memberBean;
 	private Integer years;
@@ -32,9 +31,6 @@ public class MchefBean implements java.io.Serializable {
 	}
 
 	@Id  
-//    @GeneratedValue(generator="myGenerator")  
-//    @GenericGenerator(name="myGenerator", strategy="foreign", 
-//    	parameters=@Parameter(value="member", name = "property"))
 	public Integer getMc_id(){
 		return mc_id;
 	}
@@ -43,7 +39,6 @@ public class MchefBean implements java.io.Serializable {
 		this.mc_id = mc_id;
 	}
 	
-//	@OneToOne(cascade=CascadeType.ALL)
 	@OneToOne
 	@JoinColumn(name = "mc_id")
 	public MemberBean getMemberBean() {

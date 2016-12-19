@@ -1,7 +1,11 @@
 package model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -11,10 +15,16 @@ public class CalendarBean implements java.io.Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer cal_id;
-	private Integer c_id;
-	private Integer mc_id;
+	@OneToOne
+	@JoinColumn(name = "c_id")
+	private ChefBean chefBean;
+	@OneToOne
+	@JoinColumn(name = "mc_id")
+	private MchefBean mchefBean;
 	private Integer date1;
 	private Integer date2;
 	private Integer date3;
@@ -46,13 +56,12 @@ public class CalendarBean implements java.io.Serializable {
 	private Integer date29;
 	private Integer date30;
 	private Integer date31;
-	private String theYear;
 	private String theMonth;
 	private Integer maxNum;
 	
 	@Override
 	public String toString() {
-		return "CalendarBean[cal_id = " + cal_id + ", c_id = " + c_id + ", mc_id = " + mc_id
+		return "CalendarBean[cal_id = " + cal_id + ", c_id = " + chefBean + ", mc_id = " + mchefBean
 				+ ", date1 = " + date1
 				+ ", date2 = " + date2
 				+ ", date3 = " + date3
@@ -84,28 +93,31 @@ public class CalendarBean implements java.io.Serializable {
 				+ ", date29 = " + date29
 				+ ", date30 = " + date30
 				+ ", date31 = " + date31
-				+ ", theYear = " + theYear
 				+ ", theMonth = " + theMonth
 				+ ", maxNum = " + maxNum
 				+"]";
 	}
+	public ChefBean getChefBean() {
+		return chefBean;
+	}
+
+	public void setChefBean(ChefBean chefBean) {
+		this.chefBean = chefBean;
+	}
+
+	public MchefBean getMchefBean() {
+		return mchefBean;
+	}
+
+	public void setMchefBean(MchefBean mchefBean) {
+		this.mchefBean = mchefBean;
+	}
+
 	public Integer getCal_id() {
 		return cal_id;
 	}
 	public void setCal_id(Integer cal_id) {
 		this.cal_id = cal_id;
-	}
-	public Integer getC_id() {
-		return c_id;
-	}
-	public void setC_id(Integer c_id) {
-		this.c_id = c_id;
-	}
-	public Integer getMc_id() {
-		return mc_id;
-	}
-	public void setMc_id(Integer mc_id) {
-		this.mc_id = mc_id;
 	}
 	public Integer getDate1() {
 		return date1;
@@ -292,12 +304,6 @@ public class CalendarBean implements java.io.Serializable {
 	}
 	public void setDate31(Integer date31) {
 		this.date31 = date31;
-	}
-	public String getTheYear() {
-		return theYear;
-	}
-	public void setTheYear(String theYear) {
-		this.theYear = theYear;
 	}
 	public String getTheMonth() {
 		return theMonth;

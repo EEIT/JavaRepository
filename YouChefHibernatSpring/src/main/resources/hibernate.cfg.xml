@@ -11,6 +11,9 @@
         <mapping class="model.MemberBean" />
 		<mapping class="model.MchefBean" />
 		<mapping class="model.VenueBean" />
+		<mapping class="model.CalendarBean" />
+		<mapping class="model.ChefBean" />
+		<mapping class="model.TypeBean" />
 <!-- 		<mapping class="model.DishPhotoBean" /> -->
     </session-factory>
 </hibernate-configuration>

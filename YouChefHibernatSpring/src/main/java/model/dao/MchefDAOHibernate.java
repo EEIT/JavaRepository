@@ -31,11 +31,6 @@ public class MchefDAOHibernate implements MchefDAO {
 		return (int) this.getSession().save(bean);
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<MchefBean> selectAll() {
