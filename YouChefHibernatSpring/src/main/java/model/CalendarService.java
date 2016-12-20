@@ -38,8 +38,8 @@ public class CalendarService {
 //			cb.setMaxNum(5);
 //			System.out.println(service.chefInput(cb));
 			
-			//Test for selecMchef
-//			System.out.println(service.selectMchef(1005, "201701"));
+//			Test for selecMchef
+			System.out.println(service.selectMchef(1005, "201701"));
 			
 			//Test for selectChef
 //			System.out.println(service.selectChef(3002, "201702"));

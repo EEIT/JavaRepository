@@ -35,7 +35,7 @@ public class MchefService {
 //			 System.out.println("beans=" + service.apply(bean));
 
 			// test for selectAll
-			// System.out.println(service.selectAll());
+			 System.out.println(service.selectAll());
 
 			// test for update
 //			MchefBean bean = new MchefBean();
@@ -51,9 +51,9 @@ public class MchefService {
 //			System.out.println(service.update(bean));
 			
 			//test for select(MchefBean)
-			MchefBean bean = new MchefBean();
-			bean.setMc_id(1004);
-			System.out.println(service.select(bean));
+//			MchefBean bean = new MchefBean();
+//			bean.setMc_id(1004);
+//			System.out.println(service.select(bean));
 
 			sessionFactory.getCurrentSession().getTransaction().commit();
 		} finally {

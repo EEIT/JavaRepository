@@ -15,9 +15,9 @@ public class MemberBean implements java.io.Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	@Id
-	@SequenceGenerator(name="v_id", allocationSize=1)
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	@Id
+//	@SequenceGenerator(name="v_id", allocationSize=1)
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer m_id;
 	private String lastName;
 	private String firstName;
@@ -35,6 +35,9 @@ public class MemberBean implements java.io.Serializable{
 	private Byte[] photo;
 	private Integer absent;
 	
+	@Id
+	@SequenceGenerator(name="v_id", allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public Integer getM_id() {
 		return m_id;
 	}
