@@ -16,6 +16,5 @@
 		<mapping class="model.TypeBean" />
 		<mapping class="model.DishPhotoBean" />
 		<mapping class="model.DishesBean" />
-<!-- 		<mapping class="model.DishPhotoBean" /> -->
     </session-factory>
 </hibernate-configuration>
