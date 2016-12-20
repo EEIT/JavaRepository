@@ -39,10 +39,10 @@ public class CalendarService {
 //			System.out.println(service.chefInput(cb));
 			
 //			Test for selecMchef
-			System.out.println(service.selectMchef(1005, "201701"));
+//			System.out.println(service.selectMchef(1005, "201701"));
 			
 			//Test for selectChef
-//			System.out.println(service.selectChef(3002, "201702"));
+			System.out.println(service.selectChef(3002, "201702"));
 			
 			sessionFactory.getCurrentSession().getTransaction().commit();
 		} finally {
